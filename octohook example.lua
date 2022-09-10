@@ -1,27 +1,25 @@
---[[ 
-thx ride and frosted for the docs 
---]] 
+-- Initilize Library
 
 local startTick = tick()
 
 local library =
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Qwisaskid/ui-librarys/main/octohook%20ui%20source.lua"))(
-    {cheatname = "Qwhub", gamename = "Counter Blox"}
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/notfrostedwow/sadasds/main/octohooksrc.lua"))(
+    {cheatname = "Qwhub", gamename = "Baseplate"} --
 )
 library:init()
 local utility = library.utility
 local signal = library.signal
 
 local menu =
-    library.NewWindow({title = library.cheatname .. " | " .. library.gamename, size = UDim2.new(0, 500, 0.5, 20)})
+    library.NewWindow({title = library.cheatname .. " | Private | " ..   library.gamename, size = UDim2.new(0, 500, 0.5, 20)}) -- also no Qw hub doesnt exist just a name 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 local MainTab = menu:AddTab("Main")
-local MainTab = MainTab:AddSection("Main", 1)
+local Mainsec = MainTab:AddSection("Main", 1)
 local SettingsTab = library:CreateSettingsTab(menu)
 
-MainTab:AddBox(
+Mainsec:AddBox(
     {
         text = "Testing Box",
         flag = "box",
@@ -30,28 +28,28 @@ MainTab:AddBox(
         end
     }
 )
---> textbox is kinda broken <--
-MainTab:AddButton(
+
+Mainsec:AddButton(
     {
         text = "Test",
         callback = function()
-            print("hi")
+       
         end
     }
 )
 
 ---Functions
-MainTab:AddToggle(
+Mainsec:AddToggle(
     {
         text = "Toggle",
-        flag = "",
+        flag = "testflag",
         callback = function(bool)
-    print(bool)
+  
         end
     }
 )
 
-MainTab:AddBind(
+Mainsec:AddBind(
     {
         text = "Keybind",
         flag = "",
@@ -64,21 +62,21 @@ MainTab:AddBind(
     }
 )
 
-MainTab:AddSlider(
+Mainsec:AddSlider(
     {
-        text = "slider",
-        flag = 'Walkspeed',
+        text = " Slider",
+        flag = '"',
         suffix = "%",
-        min = 16,
+        min = 0,
         max = 100,
-        increment = 1,
+        increment = .1,
         callback = function(v)
-            game.Player.LocalPlayer.Character.Humanoid.WalkSpeed = v 
+            
         end
     }
 )
 
-MainTab:AddColor(
+Mainsec:AddColor(
     {
         text = "Color",
         flag = "",
@@ -87,7 +85,7 @@ MainTab:AddColor(
     }
 )
 
-MainTab:AddList(
+Mainsec:AddList(
     {
         text = "List",
         flag = "",
@@ -96,7 +94,10 @@ MainTab:AddList(
             "5",
             "222"
         },
-        callback = function()
+        callback = function(bool)
+            if bool == "Hello" then 
+                print("hi")
+                end 
         end
     }
 )
