@@ -59,10 +59,10 @@ Mainsec:AddBind(
         text = "Keybind",
         flag = "",
         nomouse = true,
-        noindicator = true,
+        noindicator = false,
         bind = Enum.KeyCode.BackSlash,
         callback = function()
-            Print("666")
+            print(bool)
         end
     }
 )
