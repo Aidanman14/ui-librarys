@@ -1,4 +1,9 @@
--- Initilize Library
+--[[ 
+thx ride and frosted for the ui docs credits to liam#4567 for making the ui 
+
+confirm = true 
+
+]]
 
 local startTick = tick()
 
