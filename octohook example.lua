@@ -1,8 +1,7 @@
 --[[ 
 thx ride and frosted for the ui docs credits to liam#4567 for making the ui 
-
 confirm = true 
-
+looking into the source code helps 
 ]]
 
 local startTick = tick()
@@ -19,137 +18,63 @@ local menu =
     library.NewWindow({title = library.cheatname .. " | Private | " ..   library.gamename, size = UDim2.new(0, 500, 0.5, 20)}) -- also no Qw hub doesnt exist just a name 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--> Tabs <-- 
+local CombatTab = menu:AddTab("Combat")
+local Visualstab = menu:AddTab("Visuals")
+local Misctab = menu:AddTab("Misc")
 
-local MainTab = menu:AddTab("Main")
-local Mainsec = MainTab:AddSection("Main", 1)
 local SettingsTab = library:CreateSettingsTab(menu)
+--> sections <-- 
+local Aimbotsec = CombatTab:AddSection("Aim-Assist", 1)
+local saimsec = CombatTab:AddSection("Bullet-Prioritize", 2)
 
-Mainsec:AddBox(
-    {
-        text = "Testing Box",
-        flag = "box",
-        callback = function(text)
-            print(text)
-        end
-    }
-)
 
-Mainsec:AddButton(
+local aimbottoggle = Aimbotsec:AddToggle(
     {
-        text = "Test",
-        callback = function()
-       
-        end
-    }
-)
-
----Functions
-Mainsec:AddToggle(
-    {
-        text = "Toggle",
-        flag = "testflag",
+        text = "Enabled",
+        flag = "Aimbot_enabled",
         callback = function(bool)
-  
+  print(bool)
         end
     }
 )
-
-Mainsec:AddBind(
+aimbottoggle:AddBind(
     {
-        text = "Keybind",
-        flag = "",
-        nomouse = true,
+        text = "Aimbot",
+        flag = "Aimbotkeybind",
+        nomouse = false,
         noindicator = false,
-        bind = Enum.KeyCode.BackSlash,
-        callback = function()
+        bind = Enum.UserInputType.MouseButton2,
+        callback = function(bool)
             print(bool)
         end
     }
 )
-
-Mainsec:AddSlider(
+Aimbotsec:AddList(
     {
-        text = " Slider",
-        flag = '"',
-        suffix = "%",
-        min = 0,
-        max = 100,
-        increment = .1,
-        callback = function(v)
-            
-        end
-    }
-)
-
-Mainsec:AddColor(
-    {
-        text = "Color",
+        text = "Bone",
         flag = "",
-        callback = function()
-        end
-    }
-)
-
-Mainsec:AddList(
-    {
-        text = "List",
-        flag = "",
-        values = {
-            "Hello",
-            "5",
-            "222"
+        values = { 
+            "Head",
+            "UpperTorso",
+            "HumanoidRootPart",
+             "LowerTorso", 
+             "LeftHand",
+             "RightHand",
+             "LeftLowerArm",
+             "RightLowerArm",
+             "LeftUpperArm",
+             "RightUpperArm",
+             "LeftFoot",
+             "LeftLowerLeg",
+             "LeftUpperLeg",
+             "RightLowerLeg",
+              "RightFoot",
+             "RightUpperLeg"
         },
+    --   
         callback = function(bool)
-            if bool == "Hello" then 
-                print("hi")
-                end 
-        end
-    }
-)
-
---// Second Tab
-local SecondTab = menu:AddTab("Second")
-local FirstSection = SecondTab:AddSection("First Section", 1)
-
-FirstSection:AddButton(
-    {
-        text = "Hello",
-        callback = function()
-            print("yo")
-        end
-    }
-)
-
-local SecondSection = SecondTab:AddSection("Second", 2)
-SecondSection:AddSeparator({text = "Separator"})
-
-SecondSection:AddButton(
-    {
-        text = "bbaa",
-        callback = function()
-            print("yo")
-        end
-    }
-)
-
-local ThirdSection = SecondTab:AddSection("Third", 1)
-
-ThirdSection:AddButton(
-    {
-        text = "button",
-        callback = function()
-            print("ye")
-        end
-    }
-)
-
-local Fourth = SecondTab:AddSection("Fourht", 2)
-
-Fourth:AddButton(
-    {
-        text = "button",
-        callback = function()
-            print("ye")
+          print(bool)
         end
     }
 )
