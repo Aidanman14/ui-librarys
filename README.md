@@ -9,3 +9,13 @@ octohook ui - Liam
 splixprivatedrawing ui - envo/mexican/matas/egobb/xyl/pirate bay 
 
 uwuware ui - Jan 
+
+twink and material - twinmarie 
+
+obelus - bored
+
+linoria - linori
+
+wally v3 - wally
+
+bracket v3 - alexr32 
