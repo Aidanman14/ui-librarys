@@ -4817,7 +4817,7 @@ function library:CreateSettingsTab(menu)
     end})
 
     mainSection:AddSeparator({text = 'Keybinds'});
-    mainSection:AddToggle({text = 'Keybind Indicator', flag = 'keybind_indicator', state = true, callback = function(bool) 
+    mainSection:AddToggle({text = 'Keybind Indicator', flag = 'keybind_indicator', state = false, callback = function(bool) 
         library.keyIndicator:SetEnabled(bool);
     end})
     mainSection:AddSlider({text = 'Position X', flag = 'keybind_indicator_x', min = 0, max = 100, increment = .1, value = .5, callback = function()
