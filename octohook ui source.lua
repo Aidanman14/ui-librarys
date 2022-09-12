@@ -4745,7 +4745,7 @@ function library:CreateSettingsTab(menu)
         end
         writefile(self.cheatname..'/'..self.gamename..'/configs/'..library.flags.configinput.. self.fileext, http:JSONEncode({}));
         refreshConfigs()
-    end}):AddButton({text = 'Delete', confirm = true, risk = true, callback = function()
+    end}):AddButton({text = 'Delete', confirm = true, risky = true, callback = function()
         if library:GetConfig(library.flags.selectedconfig) then
             delfile(self.cheatname..'/'..self.gamename..'/configs/'..library.flags.selectedconfig.. self.fileext);
             refreshConfigs()
@@ -4812,7 +4812,7 @@ function library:CreateSettingsTab(menu)
         setclipboard(([[Roblox.GameLauncher.joinGameInstance(%s, "%s"))]]):format(game.PlaceId, game.JobId))
     end})
 
-    mainSection:AddButton({text = 'Unload', confirm = true, risk = true,  callback = function()
+    mainSection:AddButton({text = 'Unload', confirm = true, risky = true,  callback = function()
         library:Unload();
     end})
 
