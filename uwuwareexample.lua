@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Qwisaskid/ui-librarys/main/uwuware%20ui%20source.lua))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Qwisaskid/ui-librarys/main/uwuware%20ui%20source.lua"))()
 -- [Legit Tab UI] ------------------------------------------------------------------------------------------------------------------------------------------------------------
 local LegitTab = library:AddTab("Legit"); 
 local LegitColunm1 = LegitTab:AddColumn();
