@@ -26,3 +26,7 @@ pepsi - pepsi
 orion - shlex
 
 yun - flash and loris, 
+
+shaman - idk 
+
+discord & solaris - dawid 
