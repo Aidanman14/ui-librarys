@@ -11,7 +11,7 @@ splixprivatedrawing ui - envo/mexican/matas/egobb/xyl/pirate bay
 
 uwuware ui - Jan 
 
-twink and material - twinmarie 
+twink and material - twink
 
 obelus - bored
 
@@ -19,4 +19,5 @@ linoria - linori
 
 wally v3 - wally
 
-bracket v3 - alexr32 
+bracket v3/ v3.1/ v3.2 - alexr32 
+pepsi - pepsi w
